@@ -4,25 +4,21 @@ body {
 }
 nav ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 8.75%;
+    padding-left: 8.75%;
+    padding-right: 8.75%;
     list-style: none;
     font-weight: bold;
 }
 footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 11.6%;;
+    padding-left: 11.6%;
+    padding-right: 11.6%;
     list-style: none;
     font-weight: bold;
 }
-nav ul li {
+nav ul li, footer ul li {
     display: inline;
-    margin-right: 8.75%;
-    margin-left: 8.75%;
-}
-footer ul li {
-    display: inline;
-    margin-right: 11.6%;
-    margin-left: 11.6%;
+    margin: 20px;
 }
 a {
     text-decoration: none;
