@@ -2,21 +2,27 @@ body {
     margin: 60px auto;
     width: 70%;
 }
-nav ul, footer ul {
+nav ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
+    padding: 8.75%;
+    list-style: none;
+    font-weight: bold;
+}
+footer ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 11.6%;;
     list-style: none;
     font-weight: bold;
 }
 nav ul li {
     display: inline;
-    margin-right: 12.5%;
-    margin-left: 12.5%;
+    margin-right: 8.75%;
+    margin-left: 8.75%;
 }
 footer ul li {
     display: inline;
-    margin-right: 25%;
-    margin-left: 25%;
+    margin-right: 11.6%;
+    margin-left: 11.6%;
 }
 a {
     text-decoration: none;
