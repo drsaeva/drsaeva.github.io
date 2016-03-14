@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Welcome to my new website and blog!"
-date: 2014-04-30
+date: 2016-03-11
 ---
 
 It took me long enough, but I finally came to the realization that I needed a presentable site on github - here it is.
