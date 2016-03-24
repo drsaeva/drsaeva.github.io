@@ -8,13 +8,38 @@
 		
 	<body>
 		<h1>How's My Jungling?</h1>
-		<script>
-		$.get( "https://na.api.pvp.net/api/lol/na/v2.2/match/2134410987?api_key=7a70a3f5-72e7-4286-807d-a3aca0e2c863", 
-		function( data ) {
-			
-  			$('#summary').text(data.result);
-		});
-		</script>
+		
+		<div><script>
+		
+       $.ajax({
+
+    url: 'https://na.api.pvp.net/api/lol/na/v2.2/match/2134410987?api_key=7a70a3f5-72e7-4286-807d-a3aca0e2c863',
+
+
+    type: "GET",
+    dataType: "jsonp",
+    async:false,
+     success: function (msg) {
+         JsonpCallback(msg);
+    },
+    error: function () {
+        ErrorFunction();
+    }
+
+});
+
+}
+
+
+function JsonpCallback(json)
+{
+ document.getElementById('summary').innerHtml=json.result;
+
+}
+		
+		
+		
+		</script></div>
 		
 		
 	</body>
