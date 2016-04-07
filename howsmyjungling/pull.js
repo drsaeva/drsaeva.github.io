@@ -9,11 +9,12 @@ var match_results;
 
 function call_api() { 
   $.getJSON( matchAPI, results);
-  alert( "Load was performed." );
+  
 }
 
 function results(APIresults) {
   match_results = APIresults;
+  alert( "Load was performed." );
 };
 
 var match_res_html = JSON.stringify(match_results);
