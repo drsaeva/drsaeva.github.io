@@ -5,8 +5,7 @@ var matchID = prompt("Enter a match ID to call via the match API");
 var timeline = prompt("Do you want timeline data? (y/n)");
 
 var TL_bool;
-
-switch(TL_bool) {
+switch(timeline) {
   case 'Y':
   case 'y':
     TL_bool = true;
