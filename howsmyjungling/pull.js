@@ -15,7 +15,7 @@ function call_api() {
 function results(APIresults) {
   match_results = APIresults;
   alert( "Load was performed." );
+  document.body.innerHTML = JSON.stringify(match_results);
 };
 
-var match_res_html = JSON.stringify(match_results);
-document.body.innerHTML = match_res_html;
+
