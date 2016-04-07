@@ -7,8 +7,10 @@ var matchAPI = 'https://na.api.pvp.net/api/lol/na/v2.2/match/' + matchID +'?api_
 
 var match_results;
 
-$.getJSON( matchAPI, results);
-alert( "Load was performed." );
+function call_api { 
+  $.getJSON( matchAPI, results);
+  alert( "Load was performed." );
+}
 
 function results(APIresults) {
   match_results = APIresults;
