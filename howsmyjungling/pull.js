@@ -28,11 +28,11 @@ function call_api() {
   $.getJSON( matchAPI, results);
 };
 
-function results(APIresults) {
-  match_results = APIresults;
-  alert("Load was performed.");
-  document.body.innerHTML = JSON.stringify(match_results);
-};
+//function results(APIresults) {
+//  match_results = APIresults;
+//  alert("Load was performed.");
+//  document.body.innerHTML = JSON.stringify(match_results);
+//};
 
 function results(APIresults) {
   var match_results = $.parseJSON(APIresults);
