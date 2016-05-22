@@ -16,7 +16,7 @@ switch(timeline) {
     break;
   default:
     break;
-};
+}
 
 // var api_key = prompt("Enter your api key provided by Riot");
 var api_key = '7a70a3f5-72e7-4286-807d-a3aca0e2c863';
@@ -26,7 +26,7 @@ var match_results;
 
 function call_api() { 
   $.getJSON( matchAPI, results);
-};
+}
 
 //function results(APIresults) {
 //  match_results = APIresults;
@@ -48,5 +48,5 @@ function results(APIresults) {
     
   //}
   
-};
+}
 
