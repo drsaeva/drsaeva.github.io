@@ -39,7 +39,7 @@ function results(APIresults) {
   alert("Load was performed.");
   for (i in match_results) {
     //document.write(match_results[i].name + "<br />");
-    document.body.innerHTML.write = match_reuslts[i];
+    //document.body.innerHTML.write = match_reuslts[i];
     
   }
   
