@@ -40,7 +40,7 @@ function results(APIresults) {
   //for (i in match_results) {
     //document.write(match_results[i].name + "<br />");
     //document.body.innerHTML.write = match_reuslts[i];
-  var Participants =  match_results[0];
+//  var Participants =  match_results[0];
 //  for(i in Participants) {
 //    if(Participants[i] === '11'
 //     alert("Smite!");
