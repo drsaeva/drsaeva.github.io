@@ -38,7 +38,9 @@ function results(APIresults) {
   var match_results = $.parseJSON(JSON.stringify(APIresults));
   alert("Load was performed.");
   for (i in match_results) {
-    document.write(match_results[i].name + "<br />");
+    //document.write(match_results[i].name + "<br />");
+    document.body.innerHTML.write = match_reuslts[i];
+    
   }
   
 };
