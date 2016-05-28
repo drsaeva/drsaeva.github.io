@@ -32,7 +32,7 @@ function results(APIresults) {
   match_results = APIresults;
   console.log("Load was performed.");
   document.body.innerHTML = JSON.stringify(match_results);
-};
+}
 
 //function results(APIresults) {
   //var match_results = APIresults;
