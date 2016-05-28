@@ -47,7 +47,7 @@ function results(APIresults) {
 //  }
     
   //}
- alert("wat");
+ console.log("wat");
 }
 
 
