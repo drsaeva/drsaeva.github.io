@@ -42,11 +42,10 @@ function results(APIresults) {
     document.body.innerHTML.write = match_results[i];
   var Participants =  match_results[0];
   for(i in Participants) {
-    if(Participants[i] === '11'
+    if(Participants[i] === '11') {
      alert("Smite!");
+    }
   }
-    
-  //}
  console.log("wat");
 }
 
