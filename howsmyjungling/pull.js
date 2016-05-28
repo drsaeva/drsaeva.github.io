@@ -28,26 +28,26 @@ function call_api() {
   $.getJSON(matchAPI, results);
 }
 
-//function results(APIresults) {
-//  match_results = APIresults;
-//  alert("Load was performed.");
-//  document.body.innerHTML = JSON.stringify(match_results);
-//};
-
 function results(APIresults) {
-  var match_results = APIresults;
+  match_results = APIresults;
+  alert("Load was performed.");
+  document.body.innerHTML = JSON.stringify(match_results);
+};
+
+//function results(APIresults) {
+  //var match_results = APIresults;
 
 // iterate through match_results object
-  for (i in match_results) {
-    document.write(match_results[i].name + "<br />");
-    document.body.innerHTML.write = match_results[i];
-  }
-  var Participants =  match_results[0];
-  for(i in Participants) {
-    if(Participants[i] === '11') {
-    console.log("Smite!");
-    }
-  }
-}
+  //for (i in match_results) {
+    //document.write(match_results[i].name + "<br />");
+    //document.body.innerHTML.write = match_results[i];
+ // }
+  //var Participants =  match_results[0];
+ // for(i in Participants) {
+  //  if(Participants[i] === '11') {
+  // console.log("Smite!");
+   // }
+ // }
+//}
 
 
