@@ -30,7 +30,7 @@ function call_api() {
 
 function results(APIresults) {
   match_results = APIresults;
-  alert("Load was performed.");
+  console.log("Load was performed.");
   document.body.innerHTML = JSON.stringify(match_results);
 };
 
