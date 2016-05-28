@@ -19,7 +19,7 @@ switch(timeline) {
 }
 
 var api_key = prompt("Enter your api key provided by Riot");
-//var api_key = '7a70a3f5-72e7-4286-807d-a3aca0e2c863';
+
 var matchAPI = 'https://na.api.pvp.net/api/lol/na/v2.2/match/' + matchID +'?includeTimeline=' + TL_bool +'&api_key=' +api_key;
 
 var match_results;
