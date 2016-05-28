@@ -35,16 +35,16 @@ function call_api() {
 //};
 
 function results(APIresults) {
-  var match_results = $.parseJSON(APIresults);
-  //alert("Load was performed.");
-  //for (i in match_results) {
-    //document.write(match_results[i].name + "<br />");
-    //document.body.innerHTML.write = match_reuslts[i];
-//  var Participants =  match_results[0];
-//  for(i in Participants) {
-//    if(Participants[i] === '11'
-//     alert("Smite!");
-//  }
+  var match_results = APIresults;
+  alert("Load was performed.");
+  for (i in APIresults) {
+    document.write(match_results[i].name + "<br />");
+    document.body.innerHTML.write = match_results[i];
+  var Participants =  match_results[0];
+  for(i in Participants) {
+    if(Participants[i] === '11'
+     alert("Smite!");
+  }
     
   //}
  console.log("wat");
