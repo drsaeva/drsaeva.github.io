@@ -1,22 +1,23 @@
 
-var matchID = prompt("Enter a match ID to call via the match API"); 
-//var matchID = 2195248296
+//var matchID = prompt("Enter a match ID to call via the match API"); 
+var matchID = 2195248296
 
-var timeline = prompt("Do you want timeline data? (y/n)");
+//var timeline = prompt("Do you want timeline data? (y/n)");
+var timeline = true;
 
-var TL_bool;
-switch(timeline) {
-  case 'Y':
-  case 'y':
-    TL_bool = true;
-    break;
-  case 'N':
-  case 'n':
-    TL_bool = false;
-    break;
-  default:
-    break;
-}
+//var TL_bool;
+//switch(timeline) {
+//  case 'Y':
+//  case 'y':
+//    TL_bool = true;
+//    break;
+//  case 'N':
+//  case 'n':
+//    TL_bool = false;
+//    break;
+//  default:
+//    break;
+//}
 
 var api_key = prompt("Enter your api key provided by Riot");
 
@@ -25,14 +26,15 @@ var matchAPI = 'https://na.api.pvp.net/api/lol/na/v2.2/match/' + matchID +'?incl
 var match_results;
 
 function call_api() { 
-  $.getJSON(matchAPI, results);
+  $.getJSON(matchAPI, results() {function results(APIresults) {
+    match_results = APIresults;
+    console.log("Load was performed.");
+    document.body.innerHTML = JSON.stringify(match_results);
+  });
+    
 }
 
-function results(APIresults) {
-  match_results = APIresults;
-  console.log("Load was performed.");
-  document.body.innerHTML = JSON.stringify(match_results);
-}
+
 
 //function results(APIresults) {
   //var match_results = APIresults;
