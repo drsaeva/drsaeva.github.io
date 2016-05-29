@@ -28,14 +28,14 @@ var match_results;
 function call_api() { 
   $.getJSON( matchAPI, results(APIresults) {
     console.log("Load was performed.");
-    var match_results = [];
+    //var match_results = [];
     
   $.each( APIresults, function( index, value ) {
     console.log( index + ": " + value );
   });
 
    // document.body.innerHTML = JSON.stringify(match_results);
-
+  }
 }
 
 //function results(APIresults) {
