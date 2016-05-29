@@ -41,7 +41,8 @@ function results(APIresults) {
     //});
     $.each( APIresults.participants, function() {
       //if (APIresults.participants.spell1Id === 11 || APIresults.participants.spell2Id === 11) {
-        console.log(JSON.stringify(APIresults.participants.participantId));
+        var participantId = APIresults.participants.participantId;
+        console.log(participantId);
         //console.log("Smite!");
       //}
     });
