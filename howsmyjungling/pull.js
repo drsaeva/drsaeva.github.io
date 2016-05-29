@@ -39,11 +39,12 @@ function results(APIresults) {
       //});
       //}
     //});
-    $.each( APIresults.participants, function() {
+    $.each( APIresults.participants, function(index, value) {
       //if (APIresults.participants.spell1Id === 11 || APIresults.participants.spell2Id === 11) {
-        var participantId = APIresults.participants.participantId;
-        console.log(participantId);
+        //var participantId = APIresults.participants.participantId;
+        //console.log(participantId);
         //console.log("Smite!");
+        console.log( index + ": " + value );
       //}
     });
 };
