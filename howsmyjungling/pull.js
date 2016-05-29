@@ -30,9 +30,10 @@ function call_api($scope, $http) {
     $scope.matchAPI = results; //get data from Riot API
     angular.forEach($scope.matchAPI, function(data) {
       if (data === 'participants') {
-        angular.forEach(data)
+        //angular.forEach(data)
+        console.log("butts");
       }
-    })
+    });
   
   
 };
