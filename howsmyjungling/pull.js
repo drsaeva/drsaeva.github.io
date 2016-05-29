@@ -35,7 +35,7 @@ function call_api() {
   });
 
    // document.body.innerHTML = JSON.stringify(match_results);
-  }
+  });
 }
 
 //function results(APIresults) {
