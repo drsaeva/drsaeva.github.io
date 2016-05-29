@@ -26,7 +26,7 @@ var matchAPI = 'https://na.api.pvp.net/api/lol/na/v2.2/match/' + matchID +'?incl
 var match_results;
 
 function call_api() { 
-  $.getJSON( matchAPI, results(APIresults 0) {
+  $.getJSON( matchAPI, results(APIresults) {
     console.log("Load was performed.");
     var match_results = [];
     
