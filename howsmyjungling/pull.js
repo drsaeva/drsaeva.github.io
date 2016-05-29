@@ -32,12 +32,12 @@ function call_api() {
 function results(APIresults) {
     console.log("Load was performed.");
     $.each( APIresults, function( index, value ) {
-      //console.log( index + ": " + value );
-      if (index === 'Participants') {
-        $.each(Participants, function (index, value) {
-          console.log( index + ": " + value );
-        });
-      }
+      console.log( index + ": " + value );
+      //if (index === 'Participants') {
+       // $.each(Participants, function (index, value) {
+        //  console.log( index + ": " + value );
+        //});
+      //}
     });
 }
 
