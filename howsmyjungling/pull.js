@@ -31,13 +31,9 @@ function call_api() {
 
 results(APIresults) {
     console.log("Load was performed.");
-    //var match_results = [];
-    
     $.each( APIresults, function( index, value ) {
       console.log( index + ": " + value );
     });
-
-   // document.body.innerHTML = JSON.stringify(match_results);
 }
 
 //function results(APIresults) {
