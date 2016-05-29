@@ -3,7 +3,7 @@
 var matchID = 2195248296
 
 //var timeline = prompt("Do you want timeline data? (y/n)");
-var timeline = true;
+var TL_bool = true;
 
 //var TL_bool;
 //switch(timeline) {
