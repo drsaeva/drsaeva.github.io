@@ -35,16 +35,16 @@ function results(APIresults) {
       //console.log( index + ": " + value );
       //if (index === 'participants') {
       //$.each(APIresults.participants, function (index, value) {
-      //console.log( index + ": " + value );
+      //  console.log( index + ": " + value );
       //});
       //}
-    //});
-    $.each( APIresults.participants, function(index, value) {
+    $.each( APIresults.participants, function() {
+      console.log("player!");
       //if (APIresults.participants.spell1Id === 11 || APIresults.participants.spell2Id === 11) {
         //var participantId = APIresults.participants.participantId;
         //console.log(participantId);
         //console.log("Smite!");
-        console.log( index + ": " + value );
+    //    console.log( index + ": " + value );
       //}
     });
 };
