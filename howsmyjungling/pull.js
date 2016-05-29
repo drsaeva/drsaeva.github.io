@@ -38,7 +38,7 @@ function results(APIresults) {
       //  console.log( index + ": " + value );
       //});
       //}
-    $.each( APIresults.participants, function() {
+    $.each( APIresults.participants) {
       console.log("player!");
       //if (APIresults.participants.spell1Id === 11 || APIresults.participants.spell2Id === 11) {
         //var participantId = APIresults.participants.participantId;
@@ -46,7 +46,7 @@ function results(APIresults) {
         //console.log("Smite!");
     //    console.log( index + ": " + value );
       //}
-    });
+    };
 };
 
 //function results(APIresults) {
