@@ -30,16 +30,12 @@ function call_api() {
     console.log("Load was performed.");
     var match_results = [];
     
-    $.each( APIresults, function( key, val ) {
-    items.push( "<li id='" + key + "'>" + val + "</li>" );
-    });
-    
-    $( "<ul/>", {
-    "class": "my-new-list",
-    html: items.join( "" )
-  }).appendTo( "body" );
-   // document.body.innerHTML = JSON.stringify(match_results);
+  $.each( APIresults, function( index, value ) {
+    console.log( index + ": " + value );
   });
+
+   // document.body.innerHTML = JSON.stringify(match_results);
+
 }
 
 //function results(APIresults) {
