@@ -25,8 +25,16 @@ var matchAPI = 'https://na.api.pvp.net/api/lol/na/v2.2/match/' + matchID +'?incl
 
 var match_results;
 
-function call_api() { 
-  $.getJSON( matchAPI, results);
+function call_api($scope, $http) { 
+  $http.get(matchAPI).success(function(results) {
+    $scope.matchAPI = results; //get data from Riot API
+    angular.forEach($scope.matchAPI, function(data) {
+      if (data === 'participants') {
+        angular.forEach(data)
+      }
+    })
+  
+  
 };
 
 function results(APIresults) {
