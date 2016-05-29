@@ -40,10 +40,10 @@ function results(APIresults) {
       //}
     //});
     $.each( APIresults.participants, function() {
-      if (APIresults.participants.spell1Id === 11 || APIresults.participants.spell2Id === 11) {
+      //if (APIresults.participants.spell1Id === 11 || APIresults.participants.spell2Id === 11) {
         console.log(APIresults.participants.participantId);
-        console.log("Smite!");
-      }
+        //console.log("Smite!");
+      //}
     });
 };
 
