@@ -30,9 +30,9 @@ function call_api() {
     console.log("Load was performed.");
     //var match_results = [];
     
-  $.each( APIresults, function( index, value ) {
-    console.log( index + ": " + value );
-  });
+    $.each( APIresults, function( index, value ) {
+      console.log( index + ": " + value );
+    });
 
    // document.body.innerHTML = JSON.stringify(match_results);
   });
