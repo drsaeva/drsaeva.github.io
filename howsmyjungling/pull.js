@@ -39,7 +39,7 @@ function results(APIresults) {
         //});
       //}
     });
-}
+};
 
 //function results(APIresults) {
   //var match_results = APIresults;
