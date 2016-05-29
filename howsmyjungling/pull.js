@@ -30,13 +30,19 @@ function call_api() {
 };
 
 function results(APIresults) {
-    console.log("Load was performed.");
-    $.each( APIresults, function( index, value ) {
+    //console.log("Load was performed.");
+    //$.each( APIresults, function( index, value ) {
       //console.log( index + ": " + value );
-      if (index === 'participants') {
-        $.each(APIresults.participants, function (index, value) {
-          console.log( index + ": " + value );
-        });
+      //if (index === 'participants') {
+      //$.each(APIresults.participants, function (index, value) {
+      //console.log( index + ": " + value );
+      //});
+      //}
+    //});
+    $.each( APIresults.participants, function() {
+      if (APIresults.participants.spell1Id === 11 || APIresults.participants.spell2Id === 11) {
+        console.log(APIresults.participants.participantId);
+        console.log("Smite!");
       }
     });
 };
