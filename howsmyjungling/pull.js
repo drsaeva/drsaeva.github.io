@@ -26,7 +26,10 @@ var matchAPI = 'https://na.api.pvp.net/api/lol/na/v2.2/match/' + matchID +'?incl
 var match_results;
 
 function call_api() { 
-  $.getJSON( matchAPI, results(APIresults) {
+  $.getJSON( matchAPI, results);
+}
+
+results(APIresults) {
     console.log("Load was performed.");
     //var match_results = [];
     
@@ -35,7 +38,6 @@ function call_api() {
     });
 
    // document.body.innerHTML = JSON.stringify(match_results);
-  });
 }
 
 //function results(APIresults) {
