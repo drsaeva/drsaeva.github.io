@@ -34,7 +34,7 @@ function results(APIresults) {
     $.each( APIresults, function( index, value ) {
       //console.log( index + ": " + value );
       if (index === 'participants') {
-        $.each(Participants, function (index, value) {
+        $.each(participants, function (index, value) {
           console.log( index + ": " + value );
         });
       }
