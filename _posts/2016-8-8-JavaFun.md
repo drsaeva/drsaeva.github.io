@@ -4,7 +4,7 @@ title: "Fun With Java, Selenium, and OCR"
 date: 2016-08-08
 ---
 
-It's been over two months now, so I figured I'm due for an update. I hashed out a side project with my current employer as a
+It's been over <s>two</s> **four!** months now, so I figured I'm due for an update. I hashed out a side project with my current employer as a
 way of improving some of their existing workflows while boosting my portfolio as I continue my search for work as a developer.
 To sum things up:
 
