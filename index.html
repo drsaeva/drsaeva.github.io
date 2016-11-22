@@ -9,6 +9,9 @@ title: David R. Saeva
 		<a href="http://drsaeva.github.io/about">Read more about my life...</a></p>
   <br />
   <h2>From the blog</h2>
+ <div class="blog-index">  
   {% assign post = site.posts.first %}
+  {% assign content = post.content %}
   {% include post_detail.html %}
+</div>
 </div>
