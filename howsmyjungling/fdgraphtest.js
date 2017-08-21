@@ -32,44 +32,6 @@ d3.json("miserables.json", function(error, graph) {
           .on("start", dragstarted)
           .on("drag", dragged)
           .on("end", dragended));
-  var tip;
-  svg.on("click", function(){
-    if (tip) tip.remove();
-  });
-  node.on("click", function(d){
-    d3.event.stopPropagation(); 
-  
-    if (tip) tip.remove();
-    
-    tip  = svg.append("g")
-      .attr("transform", "translate(" + d.x  + "," + d.y + ")");
-      
-    var rect = tip.append("rect")
-      .style("fill", "white")
-      .style("stroke", "steelblue");
-    
-    tip.append("text")
-      .text("Name: " + d.id)
-      .attr("dy", "1em")
-      .attr("x", 5);
-
-    var con = graph.links
-      .filter(function(d1){
-        return d1.source.id === d.id;
-      })
-      .map(function(d1){
-        return d1.target + " with weight " + d1.value;
-      })
-      
-    tip.append("text")
-      .text("Connected to: " + con.join(","))
-      .attr("dy", "3em")
-      .attr("x", 5);
-    
-    var bbox = tip.node().getBBox();
-    rect.attr("width", bbox.width + 5)
-        .attr("height", bbox.height + 5)
-  });
             
   node.append("title")
       .text(function(d) { return d.id; });
