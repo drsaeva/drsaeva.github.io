@@ -11,7 +11,6 @@ var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 2, height / 2));
 
-function go() {
 d3.json("miserables.json", function(error, graph) {
   if (error) throw error;
 
@@ -56,7 +55,7 @@ d3.json("miserables.json", function(error, graph) {
         .attr("cy", function(d) { return d.y; });
   }
 });
-}
+
 
 function dragstarted(d) {
   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
