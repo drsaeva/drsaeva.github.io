@@ -32,7 +32,7 @@ d3.json("miserables.json", function(error, graph) {
           .on("start", dragstarted)
           .on("drag", dragged)
           .on("end", dragended));
-            
+
   node.append("title")
       .text(function(d) { return d.id; });
 
@@ -55,7 +55,6 @@ d3.json("miserables.json", function(error, graph) {
         .attr("cy", function(d) { return d.y; });
   }
 });
-
 
 function dragstarted(d) {
   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
