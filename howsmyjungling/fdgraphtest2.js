@@ -1,4 +1,3 @@
-var width=800, height=400;
 var color = d3.scale.category20();
 
 var force = d3.layout.force()
