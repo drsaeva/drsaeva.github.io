@@ -1,113 +1,86 @@
+var width=800, height=400;
+var color = d3.scale.category20();
+
+var force = d3.layout.force()
+    .size([width, height])
+    .linkDistance(100)
+    .charge(-300)
+    .start();
+
 var svg = d3.select("#fdg").append("svg")
-    .attr("width", width),
-    .attr("height", height);
+            .attr("width", width)
+            .attr("height", height);   
 
-var color = d3.scaleOrdinal(d3.schemeCategory20);
-
-var simulation = d3.forceSimulation()
-    .force("link", d3.forceLink().id(function(d) { return d.id; }))
-    .force("charge", d3.forceManyBody())
-    .force("center", d3.forceCenter(width / 2, height / 2));
-    
-d3.json("animal.json", function(error, graph) {
-  if (error) throw error;
+d3.json("https://codepen.io/superpikar/pen/KFein.js", function(error, graph){ 
+   
+var nodes = {};
+var links = graph.arcs;
+var pathtype = [];  
   
-  link = svg.append("g")
-      .attr("class", "links")
-    .selectAll("line")
-    .data(graph.links)
-    .enter().append("line")
-      .attr("stroke-width", function(d) { return d.weight * 3; });
-
-  var node = svg.append("g")
-      .attr("class", "nodes")
-    .selectAll("circle")
-    .data(graph.nodes)
-    .enter().append("circle")
-      .attr("r", 5)
-      .attr("fill", function(d) { return color(d.group); })
-      .call(d3.drag()
-          .on("start", dragstarted)
-          .on("drag", dragged)
-          .on("end", dragended));
-
-  var tip;
-  svg.on("click", function(){
-    if (tip) tip.remove();
-  });
-  node.on("click", function(d){
-    d3.event.stopPropagation(); 
+// Compute the distinct nodes from the links.
+links.forEach(function(link) {
+  link.source = nodes[link.source] || (nodes[link.source] = {name: link.source});
+  link.target = nodes[link.target] || (nodes[link.target] = {name: link.target});
   
-    if (tip) tip.remove();
-    
-    tip  = svg.append("g")
-      .attr("transform", "translate(" + d.x  + "," + d.y + ")");
-      
-    var rect = tip.append("rect")
-      .style("fill", "white")
-      .style("stroke", "steelblue");
-    
-    tip.append("text")
-      .text("Name: " + d.name)
-      .attr("dy", "1em")
-      .attr("x", 5);
-      
-    tip.append("text")
-      .text("Info: " + d.info)
-      .attr("dy", "2em")
-      .attr("x", 5);
-
-    var con = graph.links
-      .filter(function(d1){
-        return d1.source.id === d.id;
-      })
-      .map(function(d1){
-        return d1.target.name + " with weight " + d1.weight;
-      })
-      
-    tip.append("text")
-      .text("Connected to: " + con.join(","))
-      .attr("dy", "3em")
-      .attr("x", 5);
-    
-    var bbox = tip.node().getBBox();
-    rect.attr("width", bbox.width + 5)
-        .attr("height", bbox.height + 5)
-  });
-
-  simulation
-      .nodes(graph.nodes)
-      .on("tick", ticked);
-
-  simulation.force("link")
-      .links(graph.links);
-
-  function ticked() {
-    link
-        .attr("x1", function(d) { return d.source.x; })
-        .attr("y1", function(d) { return d.source.y; })
-        .attr("x2", function(d) { return d.target.x; })
-        .attr("y2", function(d) { return d.target.y; });
-
-    node
-        .attr("cx", function(d) { return d.x; })
-        .attr("cy", function(d) { return d.y; });
-  }
+  pathtype.push(link.dependency);
+  
 });
+  console.log(pathtype);    
+  force
+      .nodes(d3.values(nodes))
+      .links(links)
+      .on("tick", tick)
+      .start();
 
-function dragstarted(d) {
-  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-  d.fx = d.x;
-  d.fy = d.y;
+  svg.append("defs").selectAll("marker")
+    .data(pathtype)
+  .enter().append("marker")
+    .attr("id", function(d) { return d; })
+    .attr("viewBox", "0 -5 10 10")
+    .attr("refX", 25)
+    .attr("refY", -1.5)
+    .attr("markerWidth", 6)
+    .attr("markerHeight", 6)
+    .attr("orient", "auto")
+  .append("path")
+    .attr("d", "M0,-5L10,0L0,5");
+
+var path = svg.append("g").selectAll("path")
+    .data(force.links())
+  .enter().append("path")
+    .attr("class", function(d) { return "link " + d.dependency; })
+    .attr("marker-end", function(d) { return "url(#" + d.dependency + ")"; });
+
+var circle = svg.append("g").selectAll("circle")
+    .data(force.nodes())
+  .enter().append("circle")
+    .attr("r", 15)
+    .call(force.drag); 
+
+var text = svg.append("g").selectAll("text")
+    .data(force.nodes())
+  .enter().append("text")
+    .attr("x", 15)
+    .attr("y", ".31em")
+    .text(function(d) { return d.name; });
+
+// Use elliptical arc path segments to doubly-encode directionality.
+function tick() {
+  path.attr("d", linkArc);
+  circle.attr("transform", transform);
+  text.attr("transform", transform);
 }
 
-function dragged(d) {
-  d.fx = d3.event.x;
-  d.fy = d3.event.y;
+function linkArc(d) {
+  var dx = d.target.x - d.source.x,
+      dy = d.target.y - d.source.y,
+      dr = Math.sqrt(dx * dx + dy * dy);
+  return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
 }
 
-function dragended(d) {
-  if (!d3.event.active) simulation.alphaTarget(0);
-  d.fx = null;
-  d.fy = null;
+function transform(d) {
+  return "translate(" + d.x + "," + d.y + ")";
 }
+
+
+});
