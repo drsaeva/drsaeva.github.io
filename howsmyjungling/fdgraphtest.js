@@ -1,3 +1,5 @@
+use strict;
+
 var svg = d3.select("#fdg").append("svg")
             .attr("width", width)
             .attr("height", height);
