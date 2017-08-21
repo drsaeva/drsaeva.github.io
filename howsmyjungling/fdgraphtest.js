@@ -1,8 +1,8 @@
 use strict;
 
-var svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height");
+var svg = d3.select("#fdg").append("svg")
+            .attr("width", width)
+            .attr("height", height);
 
 var color = d3.scaleOrdinal(d3.schemeCategory20);
 
