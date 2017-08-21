@@ -1,3 +1,4 @@
+var width=800, height=400;
 var color = d3.scale.category20();
 
 var force = d3.layout.force()
@@ -6,7 +7,7 @@ var force = d3.layout.force()
     .charge(-300)
     .start();
 
-var svg = d3.select("#fdg").append("svg")
+var svg = d3.select("#main-content").append("svg")
             .attr("width", width)
             .attr("height", height);   
 
