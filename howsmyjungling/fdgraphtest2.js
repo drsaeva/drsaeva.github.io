@@ -1,6 +1,6 @@
-/**var svg = d3.select("#fdg").append("svg")
+var svg = d3.select("#fdg").append("svg")
     .attr("width", width),
-    .attr("height", height);*/
+    .attr("height", height);
 
 var color = d3.scaleOrdinal(d3.schemeCategory20);
 
@@ -9,7 +9,7 @@ var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 2, height / 2));
     
-d3.json("animals.json", function(error, graph) {
+d3.json("animal.json", function(error, graph) {
   if (error) throw error;
   
   link = svg.append("g")
