@@ -44,7 +44,7 @@ d3.json("nucleus.json", function(error, graph) {
     .data(graph.nodes)
     .enter().append("circle")
       .attr("r", 5)
-      .attr("fill", function(d) { return color(1); })
+      .attr("fill", function(d) { return color("blue"); })
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
