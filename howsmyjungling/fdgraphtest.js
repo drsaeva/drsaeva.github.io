@@ -1,6 +1,6 @@
-var svg = d3.select("#svg")
-	.svg.attr(width, "width")
-	.svg.attr(height, "height");
+var svg = d3.select("#svg").append("svg")
+	.attr("width", width)
+	.attr("height", height);
 
 var color = d3.scaleOrdinal(d3.schemeCategory20);
 
