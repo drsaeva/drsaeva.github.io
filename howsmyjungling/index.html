@@ -34,7 +34,7 @@ d3.json("nucleus.json", function(error, graph) {
   var link = svg.append("g")
       .attr("class", "links")
     .selectAll("line")
-    .data(graphs.links)
+    .data(graph.links)
     .enter().append("line")
       .attr("stroke-width", function(d) { return Math.sqrt(1); });
 
@@ -58,7 +58,7 @@ d3.json("nucleus.json", function(error, graph) {
       .on("tick", ticked);
 
   simulation.force("link")
-      .links(graphs.links);
+      .links(graph.links);
 
   function ticked() {
     link
