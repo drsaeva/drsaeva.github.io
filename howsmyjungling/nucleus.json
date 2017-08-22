@@ -1,6 +1,5 @@
 {
-  "graphs" : [ {
-    "nodes" : [ {
+  "nodes" : [ {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
       "type" : "PROPERTY",
       "lbl" : "has_exact_synonym"
@@ -421,5 +420,4 @@
     } ],
     "domainRangeAxioms" : [ ],
     "propertyChainAxioms" : [ ]
-  } ]
 }
