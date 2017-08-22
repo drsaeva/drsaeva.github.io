@@ -43,7 +43,7 @@ d3.json("nucleus.json", function(error, graph) {
       .attr("class", "nodes")
     .selectAll("circle")
     .data(graph.nodes.filter(function(d){
-       if !(graph.links.includes(d)) { node.exit().remove(); }
+       if !(graph.links.includes(d)) { d.exit().remove(); }
      })).append("circle")
       .attr("r", 5)
       .attr("fill", "blue")
