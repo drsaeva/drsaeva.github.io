@@ -40,7 +40,9 @@ d3.json("miserables.json", function(error, graph) {
   
   for (var i; i<graph.nodes.length; i++) {
     for (t of graph.links) {
+      console.log(t.source);
       if (t.source === graph.nodes[i].id ||  t.target === graph.nodes[i].id) {
+        console.log("deleted " + graph.nodes[i].id);
         delete graph.nodes[i];
       }
     }
