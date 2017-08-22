@@ -38,10 +38,10 @@ d3.json("miserables.json", function(error, graph) {
     .enter().append("line")
       .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
   
-  for (s of graph.nodes) {
+  for (var i; i<graph.nodes.length; i++) {
     for (t of graph.links) {
-      if (t.source === s.id ||  t.target === s.id) {
-        delete s;
+      if (t.source === graph.nodes[i].id ||  t.target === graph.nodes[i].id) {
+        delete graph.nodes[i];
       }
     }
   }
