@@ -41,7 +41,16 @@ d3.json("nucleus.json", function(error, graph) {
   var node = svg.append("g")
       .attr("class", "nodes")
     .selectAll("circle")
-    .data(graph.nodes)
+    .data(graph.nodes.filter(function(d){ 
+      for (i=0; i<d3.json.links.length; i++) {
+        if (d === d3.json.links[i].sub) {
+          return d
+        } else if (d === d3.json.links[i].obj) {
+          return d
+        } 
+      }
+      
+    }))
     .enter().append("circle")
       .attr("r", 5)
       .attr("fill", "blue")
