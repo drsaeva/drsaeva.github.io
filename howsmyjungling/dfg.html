@@ -39,12 +39,17 @@ d3.json("nucleus.json", function(error, graph) {
     .enter().append("line")
       .attr("stroke-width", 2);
   
-  console.log(graph.links.length);
-  
   var node = svg.append("g")
       .attr("class", "nodes")
     .selectAll("circle")
     .data(graph.nodes.filter(function(d){
+      graph.links.forEach(function(link) {
+            link.source = nodes[link.source] 
+                          || (nodes[link.source] = {name: link.source});
+
+            link.target = nodes[link.target] 
+                          || (nodes[link.target] = {name: link.target});
+        });
        if !(graph.links.includes(d)) { d.exit().remove(); }
      })).append("circle")
       .attr("r", 5)
