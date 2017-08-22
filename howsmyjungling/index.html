@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <style>
 
-.edges line {
+.links line {
   stroke: #999;
   stroke-opacity: 0.6;
 }
@@ -32,9 +32,9 @@ d3.json("nucleus.json", function(error, graph) {
   if (error) throw error;
 
   var link = svg.append("g")
-      .attr("class", "edges")
+      .attr("class", "links")
     .selectAll("line")
-    .data(graphs.edges)
+    .data(graphs.links)
     .enter().append("line")
       .attr("stroke-width", function(d) { return Math.sqrt(1); });
 
@@ -58,7 +58,7 @@ d3.json("nucleus.json", function(error, graph) {
       .on("tick", ticked);
 
   simulation.force("link")
-      .links(graphs.edges);
+      .links(graphs.links);
 
   function ticked() {
     link
