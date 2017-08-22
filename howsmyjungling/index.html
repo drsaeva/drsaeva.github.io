@@ -38,7 +38,9 @@ d3.json("nucleus.json", function(error, graph) {
     .data(graph.links)
     .enter().append("line")
       .attr("stroke-width", 2);
-
+  
+  console.log(graph.links.length);
+  
   var node = svg.append("g")
       .attr("class", "nodes")
     .selectAll("circle")
