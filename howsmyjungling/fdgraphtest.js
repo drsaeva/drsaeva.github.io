@@ -1,6 +1,6 @@
 var network = {
   // Start data
-	graph: d3.json("nucleus.json");,
+	graph: {d3.json("nucleus.json");},
   // Graph design
   width: 500,
   height: 500,
