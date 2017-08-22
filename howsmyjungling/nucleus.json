@@ -336,7 +336,7 @@
       "type" : "PROPERTY",
       "lbl" : "has_alternative_id"
     } ],
-    "edges" : [ {
+    "links" : [ {
       "sub" : "http://purl.obolibrary.org/obo/GO_0043231",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0043229"
