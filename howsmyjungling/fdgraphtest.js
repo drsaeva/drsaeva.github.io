@@ -1,30 +1,6 @@
 var network = {
   // Start data
-  graph: {
-    "nodes":[
-      {"id":1,"name":"Jack Hayes","colour":"#567e7b","connections":2},
-      {"id":2,"name":"Amy Castillo","colour":"#85ed67","connections":2},
-      {"id":3,"name":"Kenneth Williams","colour":"#666b01","connections":1},
-      {"id":4,"name":"Phillip Hicks","colour":"#49d159","connections":3},
-      {"id":5,"name":"Ryan Ortiz","colour":"#47f1ee","connections":2},
-      {"id":6,"name":"Edward Moore","colour":"#05626d","connections":0},
-      {"id":7,"name":"Frances Gomez","colour":"#8ee92f","connections":2},
-      {"id":8,"name":"Julia Adams","colour":"#73e14b","connections":0},
-      {"id":9,"name":"Martha Montgomery","colour":"#0b9b89"}],
-    "links":[
-      {"source":8,"target":4},
-      {"source":5,"target":7},
-      {"source":3,"target":5},
-      {"source":2,"target":1},
-      {"source":7,"target":2},
-      {"source":6,"target":5},
-      {"source":6,"target":1},
-      {"source":8,"target":2},
-      {"source":8,"target":7},
-      {"source":7,"target":4},
-      {"source":1,"target":4},
-      {"source":1,"target":3}]
-  },
+	graph: d3.json("nucleus.json");,
   // Graph design
   width: 500,
   height: 500,
