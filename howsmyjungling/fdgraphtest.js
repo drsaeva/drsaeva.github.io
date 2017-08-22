@@ -4,22 +4,10 @@ var network = {
   // Graph design
   width: 500,
   height: 500,
-  lines: {
-		stroke: {
-			color: "#ccc",
-			thickness: 2
-		}
-	},
-	nodes: {
-		fill: {
-			color: "#333"
-		},
-		stroke: {
-			color: "#fff",
-			thickness: 3
-		},
-		sizeRange: [8,30]
-	},
+  lines: {stroke: {color: "#ccc",thickness: 2}},
+	  nodes: {fill: {color: "#333"},
+		   stroke: {color: "#fff", thickness: 3},
+	sizeRange: [8,30]},
 	setup: function(){
 	  var $network = $("#network");
 	  
