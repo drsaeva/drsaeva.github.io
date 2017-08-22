@@ -44,8 +44,7 @@ text {
     var force = d3.layout.force()
         .size([width, height])
         .linkDistance(60)
-        .charge(-300)
-        .on("tick", tick);
+        .charge(-300);
 
     var svg = d3.select("body").append("svg")
         .attr("width", width)
@@ -55,4 +54,4 @@ text {
     var dataset = d3.json("miserables").links;
 
  dataset.forEach(function(ele){console.log(ele);});
-    </script>
+    </script></body></html>
