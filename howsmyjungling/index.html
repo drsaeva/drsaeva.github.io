@@ -39,7 +39,7 @@ d3.json("miserables.json", function(error, graph) {
       .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
   
   for (s of graph.nodes) {
-    if (for t of graph.links) {
+    for (t of graph.links) {
       if (t.source === s.id ||  t.target === s.id) {
         delete s;
       }
