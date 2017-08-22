@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <style>
 
-.links line {
+.edges line {
   stroke: #999;
   stroke-opacity: 0.6;
 }
@@ -28,15 +28,15 @@ var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 2, height / 2));
 
-d3.json("miserables.json", function(error, graph) {
+d3.json("nucleus.json", function(error, graph) {
   if (error) throw error;
 
   var link = svg.append("g")
-      .attr("class", "links")
+      .attr("class", "edges")
     .selectAll("line")
-    .data(graph.links)
+    .data(graphs.edges)
     .enter().append("line")
-      .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+      .attr("stroke-width", function(d) { return Math.sqrt(1); });
 
   var node = svg.append("g")
       .attr("class", "nodes")
@@ -44,21 +44,21 @@ d3.json("miserables.json", function(error, graph) {
     .data(graph.nodes)
     .enter().append("circle")
       .attr("r", 5)
-      .attr("fill", function(d) { return color(d.group); })
+      .attr("fill", function(d) { return color(1); })
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
           .on("end", dragended));
 
   node.append("title")
-      .text(function(d) { return d.id; });
+      .text(function(d) { return d.lbl; });
 
   simulation
       .nodes(graph.nodes)
       .on("tick", ticked);
 
   simulation.force("link")
-      .links(graph.links);
+      .links(graphs.edges);
 
   function ticked() {
     link
