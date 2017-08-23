@@ -28,7 +28,8 @@ var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 2, height / 2));
 
-var graph = d3.json("miserables.json");
+d3.json("miserables.json", function(error, graph) {
+  if (error) throw error;
   
   graph.nodes.forEach(function(n){ n.linkCount = 0;}); 
   graph.links.forEach(function(a) {
@@ -38,7 +39,6 @@ var graph = d3.json("miserables.json");
     });
   });
   
-  var filterednodes = graph.nodes.filter(function(n){ if (n.linkCount >0) return n});
  
   var link = svg.append("g")
       .attr("class", "links")
@@ -50,7 +50,7 @@ var graph = d3.json("miserables.json");
   var node = svg.append("g")
       .attr("class", "nodes")
     .selectAll("circle")
-    .data(filterednodes)
+    .data(graph.nodes.filter(function(n){ if (n.linkCount >0) return n}))
     .enter().append("circle")
       .attr("r", 5)
       .attr("fill", "blue")
@@ -81,7 +81,7 @@ var graph = d3.json("miserables.json");
         .attr("cy", function(d) { return d.y; });
   }
 
-
+});
 function dragstarted(d) {
   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
   d.fx = d.x;
