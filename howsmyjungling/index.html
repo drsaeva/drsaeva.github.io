@@ -80,7 +80,7 @@ var graph = d3.json("miserables.json");
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; });
   }
-});
+
 
 function dragstarted(d) {
   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
