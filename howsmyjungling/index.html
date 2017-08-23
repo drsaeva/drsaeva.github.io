@@ -51,7 +51,7 @@ d3.json("miserables.json", function(error, graph) {
   var node = svg.append("g")
       .attr("class", "nodes")
     .selectAll("circle")
-    .data(graph.nodes)
+    .data(filterednodes)
     .enter().append("circle")
       .attr("r", 5)
       .attr("fill", "blue")
