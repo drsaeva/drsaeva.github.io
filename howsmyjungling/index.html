@@ -38,6 +38,8 @@ d3.json("miserables.json", function(error, graph) {
         if (n.name === a.source) n.linkCount++;
     });
   });
+  
+  var filterednodes = graph.nodes.filter(function(n){ if (n.linkCount >0) return n;
  
   var link = svg.append("g")
       .attr("class", "links")
@@ -49,9 +51,7 @@ d3.json("miserables.json", function(error, graph) {
   var node = svg.append("g")
       .attr("class", "nodes")
     .selectAll("circle")
-    .data(graph.nodes.filter(function(n){
-      return n.linkCount > 0;
-    }))
+    .data(filterednodes)
     .enter().append("circle")
       .attr("r", 5)
       .attr("fill", "blue")
