@@ -39,7 +39,7 @@ d3.json("miserables.json", function(error, graph) {
     });
   });
   
-  var filterednodes = graph.nodes.filter(function(n){ if (n.linkCount >0) return n});
+  //var filterednodes = graph.nodes.filter(function(n){ if (n.linkCount >0) return n});
  
   var link = svg.append("g")
       .attr("class", "links")
