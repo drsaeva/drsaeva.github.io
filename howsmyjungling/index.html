@@ -50,7 +50,7 @@ d3.json("miserables.json", function(error, graph) {
       .attr("class", "nodes")
     .selectAll("circle")
     .data(graph.nodes.filter(function(n){
-      n.linkCount > 0;
+      return n.linkCount > 0;
     }))
     .enter().append("circle")
       .attr("r", 5)
