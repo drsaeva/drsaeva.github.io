@@ -30,32 +30,31 @@ var simulation = d3.forceSimulation()
 
 d3.json("miserables.json", function(error, graph) {
   if (error) throw error;
-
+  
+  graph.nodes.forEach(function(n){ n.linkCount = 0;}); 
+  graph.links.forEach(function(a) {
+     graph.nodes.filter(function (n){
+        if (n.name === a.target) n.linkCount++;
+        if (n.name === a.source) n.linkCount++;
+    });
+  });
+ 
   var link = svg.append("g")
       .attr("class", "links")
     .selectAll("line")
     .data(graph.links)
     .enter().append("line")
-      .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
-  
-  for (var i; i<graph.nodes.length; i++) {
-    console.log(graph.nodes[i].id);
-    /**for (t of graph.links) {
-      console.log(t.source);
-      if (t.source === graph.nodes[i].id ||  t.target === graph.nodes[i].id) {
-        console.log("deleted " + graph.nodes[i].id);
-        delete graph.nodes[i];
-      }
-    }*/
-  }
+      .attr("stroke-width", 0.4);links.forEach(function(link)
   
   var node = svg.append("g")
       .attr("class", "nodes")
     .selectAll("circle")
-    .data(graph.nodes)
+    .data(graph.nodes.filter(function(n){
+      n.linkCount > 0;
+    }))
     .enter().append("circle")
       .attr("r", 5)
-      .attr("fill", function(d) { return color(d.group); })
+      .attr("fill", "blue")
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
