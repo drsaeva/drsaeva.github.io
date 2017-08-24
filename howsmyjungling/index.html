@@ -33,10 +33,9 @@ d3.json("miserables.json", function(error, graph) {
   
   graph.nodes.forEach(function(n){ n.linkCount = 0;}); 
   graph.links.forEach(function(a) {
-     graph.nodes.filter(function (n){
-        if (n.name === a.target) {n.linkCount++; console.log(n.linkCount);}
-       
-        if (n.name === a.source) {n.linkCount++; console.log(n.linkCount);}
+     graph.nodes.forEach(function (n){
+        if (n.name === a.target) n.linkCount++;       
+        if (n.name === a.source) n.linkCount++;
     });
   });
   
