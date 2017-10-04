@@ -10,7 +10,8 @@
  		<h1>How's My Jungling?</h1>
   		
   		<div><script>
-      $.get( "https://na.api.pvp.net/api/lol/na/v2.2/match/2612350633?api_key=7a70a3f5-72e7-4286-807d-a3aca0e2c863", 
+     temp = prompt("Api Key?");
+      $.get( "https://na.api.pvp.net/api/lol/na/v2.2/match/2612350633?api_key="+temp, 
   		function( data ) {
   			$( ".result" ).html( data );
  		  	alert( "Load was performed." );
