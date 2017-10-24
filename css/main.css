@@ -47,6 +47,7 @@ ul.posts li {
     list-style: none;
 }
 
+/* SIDEBAR CSS */
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
@@ -61,7 +62,6 @@ ul.posts li {
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-/* SIDEBAR CSS */
 /* The navigation menu links */
 .sidenav a {
     padding: 8px 8px 8px 32px;
