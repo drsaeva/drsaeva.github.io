@@ -102,6 +102,6 @@ There are other ways around this as well. As common with Github pages, this site
 <script src={{ site.base-url }}/js/sidenav.js></script>
 ```
 
-This requires that ```base-url: ``` is set in the ```_config.yml``` file to your site's home directory - in my case, [https://drsaeva.github.io.] As it's much quicker to write {% raw %}```{{ site.base-url }}```{% endraw %} every time, this saves a little effort. It's probably something I'll implement in the not-so-distant future. 
+This requires that ```base-url: ``` is set in the ```_config.yml``` file to your site's home directory - in my case, [https://drsaeva.github.io]. As it's much quicker to write {% raw %}```{{ site.base-url }}```{% endraw %} every time, this saves a little effort. It's probably something I'll implement in the not-so-distant future. 
 
 For now, though, I need to work on implementing a clear single-page layout for my home and blog pages, as well as links in the top navigation bar that shifts dynamically to fit the current page. Expect a post on that soon.
