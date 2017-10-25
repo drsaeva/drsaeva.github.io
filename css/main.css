@@ -104,9 +104,12 @@ ul.posts li {
 .div-with-bg {
     background-image: url('https://drsaeva.github.io/img/marcy%20dam.jpg');
     background-repeat: no-repeat;
-    background-position: 100% 0%;
+    background-position: 50% 50%;
     background-attachment: fixed;
-    background-color: #1f1e1a;
+    background-size: contain;
+    width: 100%;
+    height: 0;
+    padding-top: 75%
 }
 
 /* Top Nav Bar */
