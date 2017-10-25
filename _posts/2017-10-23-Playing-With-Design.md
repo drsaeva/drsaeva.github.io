@@ -6,6 +6,7 @@ date: 2017-10-23
 
 In the last few days, I've been trying out design changes for this site. Prior, the site had a very simple set of navigation links at the top - while sensible, since the site is small, it produced a stale and unresponsive UI harkening back to the web pages of olden days.
 
+HTML:
 ```html
 <ul>
   <li>David R. Saeva </li>
@@ -15,7 +16,7 @@ In the last few days, I've been trying out design changes for this site. Prior, 
   <li><a href="/blog">blog</a></li>
 </ul>
 ```
-
+CSS:
 ```css
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
