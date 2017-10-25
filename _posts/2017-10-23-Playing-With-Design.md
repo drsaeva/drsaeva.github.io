@@ -92,7 +92,7 @@ The good - when you open the page, this menu is excellent. It's responsive, unob
 <script src="https://drsaeva.github.io/js/sidenav.js"></script>
 ```
 
-The two script tags above have one key difference: the top link is a **relative path**, and the bottom is an **absolute path**. When you navigate from https://drsaeva.github.io to https://drsaeva.github.io/blog, the **relative path** to the sourced javascript file includes the */blog*. This is a problem, since nothing exists there. If we place an **absolute path** in the script tag instead, indicated by the *https://* at the front, this file will be sourced from there.
+The two script tags above have one key difference: the top link is a **relative path**, and the bottom is an **absolute path**. When you navigate from [https://drsaeva.github.io] to [https://drsaeva.github.io/blog], the **relative path** to the sourced javascript file includes the */blog*. This is a problem, since nothing exists there. If we place an **absolute path** in the script tag instead, indicated by the *https://* at the front, this file will be sourced from there.
 
 I nearly kicked myself when I realized this. Why? I had just altered the links in the responsive sidebar from relative to absolute for the *exact same reason* no more than two hours prior. 
 
@@ -102,6 +102,6 @@ There are other ways around this as well. As common with Github pages, this site
 <script src={{ site.base-url }}/js/sidenav.js></script>
 ```
 
-This requires that ```base-url: ``` is set in the ```_config.yml``` file to your site's home directory - in my case, https://drsaeva.github.io. As it's much quicker to write {% raw %}```{{ site.base-url }}```{% endraw %} every time, this saves a little effort. It's probably something I'll implement in the not-so-distant future. 
+This requires that ```base-url: ``` is set in the ```_config.yml``` file to your site's home directory - in my case, [https://drsaeva.github.io.] As it's much quicker to write {% raw %}```{{ site.base-url }}```{% endraw %} every time, this saves a little effort. It's probably something I'll implement in the not-so-distant future. 
 
 For now, though, I need to work on implementing a clear single-page layout for my home and blog pages, as well as links in the top navigation bar that shifts dynamically to fit the current page. Expect a post on that soon.
