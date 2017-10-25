@@ -10,7 +10,8 @@ title: Home
 </div>
 <div class="blurb">
   <h2>From the blog: </h2>
- <div class="latest-post">  
-  {{ site.posts.first.excerpt }}
+ <div class="latest-post">
+  {{ post_url site.posts.first }}
+  {{ site.posts.first.content | strip_html | truncatewords: 50 }}
 </div>
 </div>
