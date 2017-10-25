@@ -11,7 +11,7 @@ title: Home
 <div class="blurb">
   <h2>From the blog: </h2>
  <div class="latest-post">
-  <a href={{ site.posts.first.url }}>{{ site.posts.first.title }}</a>
+  [{{ site.posts.first.title }}]({{ site.posts.first.url }})
   {{ site.posts.first.content | truncatewords: 50 }}
 </div>
 </div>
