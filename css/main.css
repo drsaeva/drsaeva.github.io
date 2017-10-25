@@ -104,10 +104,10 @@ ul.posts li {
 .div-with-bg {
     background-image: url('https://drsaeva.github.io/img/marcy%20dam.jpg');
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: center;
     background-attachment: fixed;
     background-size: contain;
-    width: 100%;
+    width: 70%;
     height: 0;
     padding-top: 75%
 }
