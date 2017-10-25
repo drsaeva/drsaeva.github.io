@@ -101,7 +101,7 @@ ul.posts li {
 }
 
 /* HOMEPAGE CSS */
-.image {
+.bg-image {
     background-image: url('https://drsaeva.github.io/img/colden-from-marcy-dam.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -111,7 +111,7 @@ ul.posts li {
     padding-top: 56.25%
 }
 
-.image::before{
+.bg-image::before{
 content: '';
 display: block; 
 position: absolute;
@@ -126,7 +126,7 @@ opacity: 0.25;
 z-index: 1;
 }
  
-.image h1{
+.bg-image h1{
 width: 80%;
 display: block;
 position: absolute; 
