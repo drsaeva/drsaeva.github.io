@@ -4,9 +4,9 @@ title: "Playing With Design"
 date: 2017-10-25
 use_code: true
 ---
-<p><!--excerpt.start-->
-In the last few days, I've been trying out design changes for this site. Prior, the site had a very simple set of navigation links at the top - while sensible, since the site is small, it produced a stale and unresponsive UI harkening back to the web pages of olden days.
-<!--excerpt.end-->
+
+In the last few days, I've been trying out design changes for this site. Prior, the site had a simple set of navigation links at the top - while sensible, since the site is small, it produced a stale and unresponsive UI harkening back to the web pages of olden days.
+
 
 ```html
 <ul>
@@ -106,4 +106,3 @@ There are other ways around this as well. As common with Github pages, this site
 This requires that ```base-url: ``` is set in the ```_config.yml``` file to your site's home directory - in my case, <https://drsaeva.github.io>. As it's much quicker to write {% raw %}```{{ site.base-url }}```{% endraw %} every time, this saves a little effort. It's probably something I'll implement in the not-so-distant future. 
 
 For now, though, I need to work on implementing a clear single-page layout for my home and blog pages, as well as links in the top navigation bar that shifts dynamically to fit the current page. Expect a post on that soon.
-</p>
