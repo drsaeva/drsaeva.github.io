@@ -4,8 +4,9 @@ title: "Playing With Design"
 date: 2017-10-25
 use_code: true
 ---
-
+<!--excerpt.start-->
 In the last few days, I've been trying out design changes for this site. Prior, the site had a very simple set of navigation links at the top - while sensible, since the site is small, it produced a stale and unresponsive UI harkening back to the web pages of olden days.
+<!--excerpt.end-->
 
 ```html
 <ul>
