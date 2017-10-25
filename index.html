@@ -11,8 +11,6 @@ title: Home
 <div class="blurb">
   <h2>From the blog: </h2>
  <div class="latest-post">  
-  {% assign post = site.posts.first %}
-  {% post_url post %}
-  {% assign content = post.excerpt %}
+  {{ site.posts.first.excerpt }}
 </div>
 </div>
