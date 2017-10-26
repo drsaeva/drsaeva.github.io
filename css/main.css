@@ -111,7 +111,7 @@ ul.posts li {
     padding-top: 56.25%
 }
 
-.bg-image::before{
+/*.bg-image::before{
 content: '';
 display: block; 
 position: absolute;
@@ -124,7 +124,7 @@ background: #000;
 -moz-opacity: 0.25;
 opacity: 0.25;
 z-index: 1;
-}
+}*/
  
 .bg-image h1{
 width: 80%;
