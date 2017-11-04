@@ -9,9 +9,9 @@
  		
 <body>
 	<!--h1>1.8 Capek Tech Tree</h1-->
-	<div id="cy">
-		<script>
-			var cy = cytoscape({
+	<div id="cy"></div>
+	<script>
+		var cy = cytoscape({
   		container: document.getElementById('cy'),
   		elements: [
     		{ data: { id: 'a' } },
@@ -21,10 +21,10 @@
         	source: 'a',
         	target: 'b'
       		}
-    		}]
-			});
-		</script>
-	</div>
+    	}]
+		});
+	</script>
+	
 	
 </body>
 </html>
