@@ -1,26 +1,39 @@
 <!doctype html>
+
 <html>
+
 <head>
-	<title>Stellaris Capek Technology Tree</title>
-	<link rel="main" type="text/css" href="https://drsaeva.github.io/stellaris_tech/css/main.css">
+    <meta charset="utf-8"></meta>
+    <title>Tutorial 1: Getting Started</title>
+    <script src="cytoscape.js"></script>
 </head>
-<script src="https://drsaeva.github.io/stellaris_tech/js/cytoscape.min.js"></script>	
+
+<style>
+    #cy {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+</style>
+
 <body>
-	<!--h1>1.8 Capek Tech Tree</h1-->
-	<div id="cy"></div>
-	<script>
-		var cy = cytoscape({
-  		container: document.getElementById('cy'),
-  		elements: [
-    		{ data: { id: 'a' } },
-    		{ data: { id: 'b' } },
-    		{ data: {
-        	id: 'ab',
-        	source: 'a',
-        	target: 'b'
-      		}
-    	}]
-		});
-	</script>
+    <div id="cy"></div>
+    <script>
+      var cy = cytoscape({
+        container: document.getElementById('cy'),
+        elements: [
+          { data: { id: 'a' } },
+          { data: { id: 'b' } },
+          {
+            data: {
+              id: 'ab',
+              source: 'a',
+              target: 'b'
+            }
+          }]
+      });
+    </script>
 </body>
 </html>
