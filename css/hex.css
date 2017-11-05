@@ -53,14 +53,14 @@
 
 .hex h1,
 .hex p {
-  color: #000;
-  text-rendering: optimizeLegibility;
+  color: #fff;
+  font-weight: bold;
   margin: 0;
   width: 102%;
   left: -1%;  /* prevent line on the right where background doesn't cover image */
   padding: 5%;
   box-sizing: border-box;
-  background-color: rgba(196, 196, 196,/*0, 128, 128,*/ 0.8);
+  background-color: rgba(68, 68, 68,/*0, 128, 128,*/ 0.8);
   font-weight: 300;
   transition: transform .2s ease-out, opacity .3s ease-out;
 }
@@ -80,7 +80,7 @@
   left: 45%;
   width: 10%;
   text-align: center;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #fff;
 }
 
 .hex p {
