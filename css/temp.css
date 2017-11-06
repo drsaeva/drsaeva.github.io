@@ -1,3 +1,21 @@
+/* Transitions */
+
+header,
+nav,
+a,
+li {
+/*  transition: .7s all;
+  -moz-transition: .7s all;
+  -webkit-transition: .7s all;
+  -o-transition: .7s all;*/
+}
+img {
+  transition: .4s all;
+  -moz-transition: .4s all;
+  -webkit-transition: .4s all;
+  -o-transition: .4s all;
+}
+
 /*---Navigation Whole---*/
 
 #topnav {
