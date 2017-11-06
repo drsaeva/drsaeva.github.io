@@ -44,6 +44,13 @@
   box-sizing: border-box;
 }
 
+.container-landing {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
 .column,
 .columns {
   width: 100%;
