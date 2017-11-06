@@ -444,7 +444,7 @@ there.
     filter: grayscale(100%);
 }
 
-.landing > h1{
+.landing h1{
 display: block;
 position: absolute; 
 top: 50%; 
@@ -461,4 +461,3 @@ text-align: center;
 margin: 0; 
 z-index: 9;
 }
-
