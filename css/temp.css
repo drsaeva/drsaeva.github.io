@@ -25,7 +25,7 @@
   float: none;
   max-height: 0;
   overflow: hidden;
-  position: center;
+  text-align: center;
 }
 
 @media (min-width: 1100px) {
@@ -34,7 +34,7 @@
   background:none;
   display: inline-block;
   float: none;
-  position: center;
+  text-align: center;
  }
 }
 
