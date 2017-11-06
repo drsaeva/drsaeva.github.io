@@ -434,7 +434,10 @@ there.
 
 /*---Landing---*/
 #landing {
-    background: url('https://drsaeva.github.io/img/colden-from-marcy-dam.jpg') no-repeat center cover;
+    background-image: url('https://drsaeva.github.io/img/colden-from-marcy-dam.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 100%;
     height: 0;
     padding-top: 56.25%;
