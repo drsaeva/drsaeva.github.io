@@ -222,17 +222,16 @@
 
 @media (min-width: 1100px) {
   .burger-lines {
-    display:none; }
+    display: none; }
 
   .nav_header {
-    display:block;
-    float:left;
+    display: inline-block;
+    float: none;
     margin:0; }
 
-  .nav_header > li,
-  a.nav-btn { 
-    display:block;
-    float: left;
+  .nav_header > li { 
+    display: inline-block;
+    float: none;
     /*padding:37px 20px 20px 20px;*/
     padding: 20px;
     margin:0; }
