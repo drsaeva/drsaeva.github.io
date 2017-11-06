@@ -5,9 +5,9 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <title>David R Saeva</title>
+  <meta name="" content="">
+  <meta name="David R Saeva" content="">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -19,70 +19,98 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" type="text/css" href="https://drsaeva.github.io/css/main.css">
   <link rel="stylesheet" href="https://drsaeva.github.io/css/normalize.css">
   <link rel="stylesheet" href="https://drsaeva.github.io/css/skeleton.css">
   <link rel="stylesheet" href="https://drsaeva.github.io/css/hex.css">
 
 </head>
 <body>
-
+  <! -- Top Navigation Bar
+  -------------------------------------------------- -->
+  <nav class="topnav" id="myTopnav" >
+		<ul>
+      <li><a href="#">home</a></li>
+      <li><a href="#placeholder">?_?</a></li>
+      <li><a href="#latestpost">latest post</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="mailto:drsaeva@gmail.com">contact</a></i>
+    </ul>  
+	</nav>
+  
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+  <section id="placeholder">
+    <div class="container">
+      <div class="row">
+        <div class="one-half column" style="margin-top: 25%">
+          <h4>Basic Page</h4>
+          <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
   
-  <div class="container" id="projects">
-    <ul id="hexGrid">
-  <li class="hex">
-    <a class="hexIn" id="utr" href="https://github.com/drsaeva/utr-analysis">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Diffuse_large_B_cell_lymphoma_-_cytology_low_mag.jpg/1920px-Diffuse_large_B_cell_lymphoma_-_cytology_low_mag.jpg" alt="" />
-      <h1>utr-analysis</h1>
-      <p>Perl scripts with SQL integration for gene sequence analysis</p>
-    </a>
-  </li>
-  <li class="hex">
-    <a class="hexIn" id="labBot" href="https://github.com/drsaeva/labBot">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Tobias-AIDS-test.jpg" alt="" />
-      <h1>labBot</h1>
-      <p>OCR and frontend-automation in Java for handling patient medical lab data</p>
-    </a>
-  </li>
-  <li class="hex">
-    <a class="hexIn" id="agga" href="https://github.com/drsaeva/JHU-Course-Code/tree/master/BFX/AGGA">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PLoSBiol3.5.Fig7ChromosomesAluFish.jpg" alt="" />
-      <h1>AGGA</h1>
-      <p>Genomics tool pipelines with bash and analytics with R</p>
-    </a>
-  </li>
-  <li class="hex">
-    <a class="hexIn" id="gedav" href="https://github.com/drsaeva/JHU-Course-Code/tree/master/BFX/GEDAV">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/DNA_microarray.svg" alt="" />
-      <h1>GEDAV</h1>
-      <p>R-driven statistical analyses of gene expression data</p>
-    </a>
-  </li>
-  <li class="hex">
-    <a class="hexIn" id="wep" href="https://github.com/drsaeva/JHU-Course-Code/tree/master/WEP">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg" alt="" />
-      <h1>WEP</h1>
-      <p>Java and Python implementations of common topics in comp sci <br>(eg. sorting, trees)</p>
-    </a>
-  </li>
-  <li class="hex">
-    <a class="hexIn" href="#">
-      <img src="https://farm3.staticflickr.com/2827/10384422264_d9c7299146.jpg" alt="" />
-      <h1>This is a title</h1>
-      <p>Some sample text about the article this hexagon leads to</p>
-    </a>
-  </li>
-  </div>
-
+  <!-- Blog section -->
+  <section id="latestpost">
+    <div class="container">
+      <h1>Latest Blog Post</h1>
+      <div class="latest-post">
+        <a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a>
+        {{ site.posts.first.content | truncatewords: 50 }}
+      </div>
+      <a href="https://drsaeva.github.io/blog">See more here</a>
+    <div class="container"
+  </section>
+   
+  <!-- Projects section-->
+  <section id="projects">
+    <div class="container">
+      <ul id="hexGrid">
+        <li class="hex">
+          <a class="hexIn" id="utr" href="https://github.com/drsaeva/utr-analysis">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Diffuse_large_B_cell_lymphoma_-_cytology_low_mag.jpg/1920px-Diffuse_large_B_cell_lymphoma_-_cytology_low_mag.jpg" alt="" />
+            <h1>utr-analysis</h1>
+            <p>Perl scripts with SQL integration for gene sequence analysis</p>
+          </a>
+        </li>
+        <li class="hex">
+          <a class="hexIn" id="labBot" href="https://github.com/drsaeva/labBot">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Tobias-AIDS-test.jpg" alt="" />
+            <h1>labBot</h1>
+            <p>OCR and frontend-automation in Java for handling patient medical lab data</p>
+          </a>
+        </li>
+        <li class="hex">
+          <a class="hexIn" id="agga" href="https://github.com/drsaeva/JHU-Course-Code/tree/master/BFX/AGGA">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PLoSBiol3.5.Fig7ChromosomesAluFish.jpg" alt="" />
+            <h1>AGGA</h1>
+            <p>Genomics tool pipelines with bash and analytics with R</p>
+          </a>
+        </li>
+        <li class="hex">
+          <a class="hexIn" id="gedav" href="https://github.com/drsaeva/JHU-Course-Code/tree/master/BFX/GEDAV">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/DNA_microarray.svg" alt="" />
+            <h1>GEDAV</h1>
+            <p>R-driven statistical analyses of gene expression data</p>
+          </a>
+        </li>
+        <li class="hex">
+          <a class="hexIn" id="wep" href="https://github.com/drsaeva/JHU-Course-Code/tree/master/WEP">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg" alt="" />
+            <h1>WEP</h1>
+            <p>Java and Python implementations of common topics in comp sci <br>(eg. sorting, trees)</p>
+          </a>
+        </li>
+        <li class="hex">
+          <a class="hexIn" href="#">
+            <img src="https://farm3.staticflickr.com/2827/10384422264_d9c7299146.jpg" alt="" />
+            <h1>This is a title</h1>
+            <p>Some sample text about the article this hexagon leads to</p>
+          </a>
+        </li>
+      </div>
+    /section>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
