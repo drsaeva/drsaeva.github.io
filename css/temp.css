@@ -213,13 +213,13 @@
 @media (max-width: 1100px) {
    header.small .navbar.expand,
    header.large .navbar.expand {
-    height: 100vh;
-    background-color: #000;
-    margin-top: -80px;
+   height: 100vh;
+   background-color: #000;
+   margin-top: -80px;
   }
   header.small .navbar.expand ul.nav_header li,
   header.large .navbar.expand ul.nav_header li {
-    margin-top: 0px;
+  margin-top: 0px;
   }
 }
 
@@ -239,7 +239,8 @@
     float: none;
     display: inline-block;
     /*padding:37px 20px 20px 20px;*/
-    padding: 20px;
+    /*padding: 20px;*/
+    width: 20%;
     margin:0; 
   }
 
