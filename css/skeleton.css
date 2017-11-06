@@ -35,6 +35,15 @@
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
+
+.container-header {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
 .column,
 .columns {
   width: 100%;
@@ -43,15 +52,17 @@
 
 /* For devices larger than 400px */
 @media (min-width: 400px) {
-  .container {
+  .container,
+  .container-header {
     width: 85%;
     padding: 0; }
 }
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
-  .container {
-    width: 80%; }
+  .container, 
+  .container-header {
+    width: 90%; }
   .column,
   .columns {
     margin-left: 4%; }
