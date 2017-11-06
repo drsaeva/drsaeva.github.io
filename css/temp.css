@@ -22,6 +22,7 @@
 
 /*---Nav List Items---*/
 .navbar {
+  left: 50%;
   float: none;
   max-height: 0;
   overflow: hidden;
