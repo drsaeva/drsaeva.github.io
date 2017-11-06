@@ -22,7 +22,6 @@
 
 /*---Nav List Items---*/
 .navbar {
-  left: 50%;
   float: none;
   max-height: 0;
   overflow: hidden;
@@ -246,7 +245,6 @@
   .nav_header > li a:hover { 
       color: #03bfd2; }
 }
-
 
 .nav_header--external { 
     color:#fff;
