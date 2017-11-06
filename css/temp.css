@@ -1,8 +1,7 @@
 /*---Navigation Whole---*/
 
 #topnav {
-  position: relative;
-  left: 50%;
+  position: fixed;
   top: 0;
   width: 100%;
   background-color: #000;
@@ -32,7 +31,7 @@
   .navbar { 
     max-height:150px;
     background:none;
-    display: inline-block;
+    float: none;
   }
 }  
 
@@ -43,10 +42,11 @@
 }
 .nav_header li {
   list-style-type: none;
-  display: block;
+  display: inline-block;
+  text-align: center;
 }
 .nav_header > li {
-  display: block;
+  display: inline-block;
 }
 
 .nav_header > li a {
