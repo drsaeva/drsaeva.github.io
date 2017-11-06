@@ -11,16 +11,14 @@
 
 .header { 
   background: #000;
-  padding:40px 0; }
+  padding:40px 0; 
+}
 
 @media (min-width: 750px) {
   .header { 
-    padding:40px 0 80px 0; }
+    padding:40px 0 80px 0; 
+  }
 }
-
-.header__logo { 
-  height:120px;
-  width:120px; }
 
 /*---Nav List Items---*/
 .navbar {
@@ -30,14 +28,12 @@
 }
 
 @media (min-width: 1100px) {
-.navbar { 
-  max-height:150px;
-  background:none;
-  display: inline-block;
-  float:right;
- }
-}
-
+  .navbar { 
+    max-height:150px;
+    background:none;
+    display: inline-block;
+  }
+}  
 
 .nav_header {
   padding: 0;
