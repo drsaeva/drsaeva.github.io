@@ -38,17 +38,9 @@
 .nav_header {
   padding: 0;
   height: 100%;
-}
-
-.nav_header ul {
   list-style-type: none;
   display: inline-block;
-}
-.nav_header li {
   text-align: center;
-}
-.nav_header > li {
-  display: inline-block;
 }
 
 .nav_header > li a {
