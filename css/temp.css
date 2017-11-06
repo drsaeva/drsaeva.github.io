@@ -28,26 +28,31 @@
 }
 
 @media (min-width: 1100px) {
-  .navbar { 
-    max-height:150px;
-    background:none;
-    float: none;
-  }
-}  
+.navbar { 
+  max-height:150px;
+  background:none;
+  display: inline-block;
+  float:right;
+ }
+}
 
 .nav_header {
   padding: 0;
-  height: 100%;
   list-style-type: none;
-  display: inline-block;
-  text-align: center;
+  height: 100%;
+}
+.nav_header li {
+  list-style-type: none;
+  display: block;
+}
+.nav_header > li {
+  display: block;
 }
 
 .nav_header > li a {
   font-size: 18px;
   font-weight: 500;
   color: #fff;
-  transition: all 0.4s ease;
 }
 
 @media (max-width: 1100px) {
