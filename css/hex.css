@@ -60,7 +60,7 @@
   left: -1%;  /* prevent line on the right where background doesn't cover image */
   padding: 5%;
   box-sizing: border-box;
-  background-color: rgba(68, 68, 68,/*0, 128, 128,*/ 0.8);
+  background-color: rgba(3, 191, 210, 0.8);
   font-weight: 300;
   transition: transform .2s ease-out, opacity .3s ease-out;
 }
