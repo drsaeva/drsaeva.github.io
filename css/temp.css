@@ -47,12 +47,12 @@
   height: 100%;
 }
 .nav_header li {
-  display: block;
+  display: inline-block;
 }
 
-/*.nav_header > li {
-  display: block;
-}*/
+.nav_header > li {
+  display: inline-block;
+}
 
 .nav_header > li a {
   font-size: 18px;
@@ -231,10 +231,13 @@
     display: inline-block;
     list-style: none;
     float: none;
-    margin:0; }
+    margin:0; 
+    width: 100%;
+  }
 
   .nav_header > li { 
     float: none;
+    display: inline-block;
     /*padding:37px 20px 20px 20px;*/
     padding: 20px;
     margin:0; 
