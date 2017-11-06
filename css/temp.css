@@ -1,12 +1,12 @@
 /*---Navigation Whole---*/
 
 #topnav {
-  position: fixed;
+  position: relative;
+  left: 50%;
   top: 0;
   width: 100%;
   background-color: #000;
   z-index: 200;
-  justify-content: center;
 }
 
 
