@@ -444,20 +444,17 @@ there.
     filter: grayscale(100%);
 }
 
-.landing h1{
-display: block;
-position: absolute; 
-top: 50%; 
-left: 50%; 
--webkit-transform: translate(-50%,-50%);
--ms-transform: translate(-50%,-50%); 
-transform: translate(-50%,-50%);
-font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-font-size: 3em; 
-font-weight: bold;
-color: #fff;
-line-height: 70px;
-text-align: center; 
-margin: 0; 
-z-index: 9;
+.landing-text {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%); 
+    transform: translate(-50%,-50%);
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 3em; 
+    font-weight: bold;
+    color: #fff;
+    text-align: center;  
+    z-index: 9;
 }
