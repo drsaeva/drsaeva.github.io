@@ -433,7 +433,7 @@ there.
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /*---Landing---*/
-#landing {
+.landing {
     background-image: url('https://drsaeva.github.io/img/colden-from-marcy-dam.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -444,7 +444,7 @@ there.
     filter: grayscale(100%);
 }
 
-#landing > h1{
+.landing > h1{
 display: block;
 position: absolute; 
 top: 50%; 
