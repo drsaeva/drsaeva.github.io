@@ -29,15 +29,19 @@
 
   <!-- Top Navigation Bar
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <nav class="topnav" id="myTopnav" >
-		<ul>
-      <li><a href="#">home</a></li>
-      <li><a href="#placeholder">?_?</a></li>
-      <li><a href="#latestpost">latest post</a></li>
-      <li><a href="#projects">projects</a></li>
-      <li><a href="mailto:drsaeva@gmail.com">contact</a></i>
-    </ul>  
-	</nav>
+  <header id="topnav">
+		<div class="container-header">
+			<nav class="navbar">
+				<ul class="nav_header">
+      		<li><a href="#">home</a></li>
+      		<li><a href="#placeholder">?_?</a></li>
+      		<li><a href="#latestpost">latest post</a></li>
+      		<li><a href="#projects">projects</a></li>
+      		<li><a href="mailto:drsaeva@gmail.com">contact</a></i>
+    		</ul>
+			</nav>
+		</div>
+	</header>
   
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -112,6 +116,43 @@
         </li>-->
       </div>
     /section>
+
+<!-- Navigation bar JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<script type="text/javascript">
+// Toggle mobile menu
+$(document).ready(function(){
+  $('#menu-icon').on('click', function(){
+    $('.navbar').toggleClass('expand');
+    $('#navigation').toggleClass('container-header');
+  });
+
+  $('.header__navigation > li a').on('click', function(){
+    $('.navbar').toggleClass('expand');
+    return false;
+  });
+
+// Scroll to JS
+  $(".header__navigation a").click(function(){
+    // e.preventDefault();
+    $('html,body').scrollTo(this.hash,this.hash);
+  });
+
+});
+
+// Reduce size of header on scroll
+$(document).on("scroll", function() {
+
+	if($(document).scrollTop()>100) {
+		$("header").removeClass("large").addClass("small");
+	} else {
+		$("header").removeClass("small").addClass("large");
+	}
+	
+});
+</script>
+			
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
