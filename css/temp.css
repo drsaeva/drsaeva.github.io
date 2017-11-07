@@ -48,6 +48,8 @@
 }
 .nav_header li {
   display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .nav_header > li {
