@@ -454,14 +454,12 @@ there.
 }
 
 .bg_img {
-    position: absolute;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%; /* need a separate class for the background image that includes a padding-top attr correct to its aspect ratio */
     height: 0;
-    background-color: gray;
-    background-blend-mode: luminosity;
+    filter: grayscale(100%);
 }
 
 /*---Landing---*/
