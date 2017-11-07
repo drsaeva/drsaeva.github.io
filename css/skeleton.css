@@ -442,10 +442,11 @@ there.
 /* Custom CSS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*---Images---*/
-.pic {
+.bw_pic {
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
+  filter: grayscale(100%);
 }
 
 /*---Landing---*/
