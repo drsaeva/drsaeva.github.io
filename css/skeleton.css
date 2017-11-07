@@ -459,7 +459,8 @@ there.
     background-position: center;
     width: 100%; /* need a separate class for the background image that includes a padding-top attr correct to its aspect ratio */
     height: 0;
-    filter: grayscale(100%);
+    background-color: gray;
+    background-blend-mode: luminosity;
 }
 
 /*---Landing---*/
