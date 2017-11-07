@@ -488,6 +488,20 @@ there.
   padding-top: 56.25%;
 }
 
+.ending-text {
+    position: absolute; 
+    top: 50%; 
+    left: 25%; 
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%); 
+    transform: translate(-50%,-50%);
+    font-size: 3em; 
+    font-weight: bold;
+    color: #fff;
+    text-align: center;  
+    z-index: 9;
+}
+
 /*---Post-Landing Sections---*/
 .section {
   padding-top: 2em;
@@ -568,8 +582,4 @@ there.
     left: 50%;
     margin-left:-145px;
     width: 30%; } 
-}
-
-#ending {
-  text-align: center;
 }
