@@ -231,7 +231,7 @@
     display: inline-block;
     list-style: none;
     float: none;
-    margin: auto; 
+    margin: 0; 
     width: 100%;
   }
 
