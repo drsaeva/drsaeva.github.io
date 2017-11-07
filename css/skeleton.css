@@ -500,6 +500,11 @@ there.
     color: #fff;
     text-align: center;  
     z-index: 9;
+    filter: none;
+}
+
+.ending-text > a {
+   text-decoration: none;
 }
 
 /*---Post-Landing Sections---*/
