@@ -47,11 +47,11 @@
   height: 100%;
 }
 .nav_header li {
-  display: block;
+  display: inline-block;
 }
 
 .nav_header > li {
-  display: block;
+  display: inline-block;
 }
 
 .nav_header > li a {
@@ -237,7 +237,7 @@
 
   .nav_header > li { 
     float: none;
-    display: block;
+    display: inline-block;
     /*padding:37px 20px 20px 20px;*/
     padding: 20px;
     width: 10%;
