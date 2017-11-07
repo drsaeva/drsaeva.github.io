@@ -248,10 +248,10 @@
     color:#fff;
     text-decoration: none;
     font-family: "Raleway", "Poppins", serif;
-    font-size: 18;
+    font-size: 18px;
     font-weight: 500;
-    /*transition: all 0.2s ease;*/
-    /*font-weight: 800;*/ }
+    transition: all 0.4s ease;
+  }
 
   .nav_header > li a:hover { 
       color: #03bfd2; 
