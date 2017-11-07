@@ -454,6 +454,7 @@ there.
 }
 
 .bg_img {
+    position: absolute;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
