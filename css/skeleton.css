@@ -525,7 +525,7 @@ there.
   height: 100%;
 }
 
-.latest-post > h5, a {
+.latest-post > h3, h5, a {
   color: #fff
 }
 
