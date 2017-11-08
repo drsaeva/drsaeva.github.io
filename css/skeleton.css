@@ -516,13 +516,15 @@ there.
 
 /*---Post-Landing Sections---*/
 .section {
+  background-size: cover;
   padding-top: 2em;
-  padding-bottom: 2em; }
+  padding-bottom: 2em;
+  background-color: #fff;
+}
 
 /* Blog sampling */
 #latestpost {
   background-color: #000;
-  height: 100%;
 }
 
 .latest-post > h3, h5, a {
