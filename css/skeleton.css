@@ -522,6 +522,11 @@ there.
   background-color: #fff;
 }
 
+/* About */
+#about > a {
+  color: #000
+}
+
 /* Blog sampling */
 #latestpost {
   background-color: #000;
