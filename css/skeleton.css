@@ -504,11 +504,11 @@ there.
     filter: none;
 }
 
-.ending-text > h4 a {
+.ending-text > h4 > a {
    color: #fff;
 }
 
-.ending-text > h4 a:hover {
+.ending-text > h4 > a:hover {
   color: #0FA0CE;
   text-decoration: none;
   transition: ease 0.3s;
