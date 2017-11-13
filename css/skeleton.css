@@ -523,11 +523,11 @@ there.
 }
 
 /* About */
-.about h4, a {
+.about > h4 > a {
   color: #000
 }
 
-.about h4, a:hover {
+.about > h4 > a:hover {
   color: #0FA0CE
   text-decoration: none;
   transition: ease 0.3s;
