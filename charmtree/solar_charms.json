@@ -1,0 +1,48 @@
+{"arc": {
+		"root": {
+			"parent": null,
+			"child": ["wise_arrow", "phantom_ar"],
+			"essence": 0,
+			"ability": 0,
+			"has_upgrade": false,
+			"ref": null,
+			"desc": null
+		},
+		"wise_arrow": {
+			"parent": "root",
+			"child": ["sight_with", "tran_of_un"],
+			"essence": 1,
+			"ability": 2,
+			"has_upgrade": false,
+			"ref": "Core, p. 255",
+			"desc": "Supplement a withering or decisive attack, reducing benefits of cover. Can hit an enemy in full cover if used in conjunction with an aim action."
+		}, 
+		"sight_with": {
+			"parent": "wise_arrow",
+			"child": ["blood_with", "force_with", "there_is_no"],
+			"essence": 1,
+			"ability": 3,
+			"has_upgrade": true,
+			"ref": "Core, p. 255",
+			"desc": "Ignore visual condition impairments like fog, smoke, and pitch blackness for one attack. Free upgrade to see through cover at higher Essence."
+		},
+		"phantom_ar": {
+			"parent": "root",
+			"child": ["fiery_arro", "immacul_go", "rain_of_fe"],
+			"essence": 1,
+			"ability": 3,
+			"has_upgrade": true,
+			"ref": "Core, p. 257",
+			"desc": "Fire without using ammunition. Use Intimacies to enhance an attack once per scene. Additional special effect available at Essence 3+."
+		},
+		"fiery_arro": {
+			"parent": "phantom_ar",
+			"child": ["dazz_flare", "hang_judg_a"],
+			"essence": 1,
+			"ability": 4,
+			"has_upgrade": false,
+			"ref": "Core, p. 257",
+			"desc": "Augment a decisive attack to increase damage slightly and make your enemy catch fire if you deal enough damage. Can be used against flammable objects as well to start a fire."
+		}
+	}
+}
