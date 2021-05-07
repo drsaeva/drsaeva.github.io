@@ -187,17 +187,6 @@ a:hover {
   transition: ease 0.3s;
 }
 
-.w-bg-link {
-  a {
-    color: #000 !important;
-  }
-  a:hover {
-    color: #0FA0CE !important;
-    text-decoration: none !important;
-    transition: ease 0.3s !important;
-  }
-}
-
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button,
@@ -550,6 +539,10 @@ there.
 
 .latest-post > h3, h5, a {
   color: #fff
+}
+
+.w-bg-link > a {
+  color: #000;
 }
 
 @media (min-width: 750px) {
