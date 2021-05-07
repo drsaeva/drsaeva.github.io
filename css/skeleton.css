@@ -188,9 +188,8 @@ a:hover {
 }
 
 .wg-bg-link {
-  text-align: center;
   a {
-    color: #000; 
+    color: #000; !important
   }
   a:hover {
     color: #0FA0CE;
