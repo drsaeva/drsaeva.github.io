@@ -192,9 +192,9 @@ a:hover {
     color: #000 !important;
   }
   a:hover {
-    color: #0FA0CE;
-    text-decoration: none;
-    transition: ease 0.3s;
+    color: #0FA0CE !important;
+    text-decoration: none !important;
+    transition: ease 0.3s !important;
   }
 }
 
