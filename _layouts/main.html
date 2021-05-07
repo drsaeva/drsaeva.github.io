@@ -45,8 +45,8 @@
         <ul class="nav_header">
           <li><a href="#">home</a></li>
           <li><a href="#about">about</a></li>
-          <li><a href="#latestpost">latest post</a></li>
           <li><a href="#projects">projects</a></li>
+          <li><a href="#latestpost">latest post</a></li>
           <li><a href="#contact">contact</a></i>
         </ul>
       </nav>
@@ -91,13 +91,6 @@
     </div>
   </section>
   
-  <!-- Blog section -->
-  <section id="latestpost" class="section">
-    <div class="container">
-      {{ content }}
-    </div>
-  </section>
-   
   <!-- Projects section-->
   <section id="projects" class="section">
     <div class="container">
@@ -105,6 +98,13 @@
       <div>
       <h4>Here are some of the projects I've worked on.</h4>
       <ul id="hexGrid">
+        <li class="hex">
+          <a class="hexIn" id="utr" href="https://github.com/drsaeva/utr-analysis">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Diffuse_large_B_cell_lymphoma_-_cytology_low_mag.jpg/1920px-Diffuse_large_B_cell_lymphoma_-_cytology_low_mag.jpg" alt="" />
+            <h1>utr-analysis</h1>
+            <p>Perl scripts with SQL integration for gene sequence analysis</p>
+          </a>
+        </li>
         <li class="hex">
           <a class="hexIn" id="utr" href="https://github.com/drsaeva/utr-analysis">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Diffuse_large_B_cell_lymphoma_-_cytology_low_mag.jpg/1920px-Diffuse_large_B_cell_lymphoma_-_cytology_low_mag.jpg" alt="" />
@@ -150,15 +150,23 @@
         </ul>
         </div>
       </div>
+      <h4>See more on my [github user page](https://github.com/drsaeva).</h4> 
     </section>
     
+  <!-- Blog section -->
+  <section id="latestpost" class="section">
+    <div class="container">
+      {{ content }}
+    </div>
+  </section>
+   
   <!-- Contact -->
     <section id="contact">
       <div class="container-landing">
         <div class="ending bg_img">
           <div class="ending-text" id="ending">
             <h4>I want to help you<br>reach the summit.</h4>
-            <h4><a href="drsaeva@gmail.com">Get in touch and<br>share your goals with me.</a></h4>
+            <h4><a href="mailto:drsaeva@gmail.com">Get in touch and<br>share your goals with me.</a></h4>
           </div>
         </div> 
       </div>
