@@ -187,9 +187,9 @@ a:hover {
   transition: ease 0.3s;
 }
 
-.wg-bg-link {
+.w-bg-link {
   a {
-    color: #000; !important
+    color: #000 !important;
   }
   a:hover {
     color: #0FA0CE;
