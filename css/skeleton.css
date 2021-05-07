@@ -187,6 +187,17 @@ a:hover {
   transition: ease 0.3s;
 }
 
+.wg-bg-link {
+  text-align: center;
+  a {
+    color: #000; 
+  }
+  a:hover {
+    color: #0FA0CE;
+    text-decoration: none;
+    transition: ease 0.3s;
+  }
+}
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
