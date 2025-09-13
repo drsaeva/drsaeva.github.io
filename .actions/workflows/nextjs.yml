@@ -4,6 +4,8 @@ on:
   # Runs on pushes targeting main
   push:
     branches: ['main']
+  commit:
+    branches: ['main']
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
