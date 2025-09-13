@@ -25,7 +25,7 @@ export default function Home() {
           </a>
           <a
             className="hover:underline hover:underline-offset-4"
-            href="www.linkedin.com/in/david-r-saeva"
+            href="https://www.linkedin.com/in/david-r-saeva"
             target="_blank"
             rel="noopener noreferrer"
           >
