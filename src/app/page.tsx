@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ClickableIcon from "@/components/clickable-icon";
 
 export default function Home() {
   return (
@@ -9,34 +9,21 @@ export default function Home() {
           developer
         </p>
         <div className="flex gap-[24px] align-self-center">
-          <a
-            className="hover:underline hover:underline-offset-4"
-            href="https://www.github.com/drsaeva"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/github.svg"
-              alt="Github"
-              width={24}
-              height={24}
-            />
-          </a>
-          <a
-            className="hover:underline hover:underline-offset-4"
-            href="https://www.linkedin.com/in/david-r-saeva"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/linkedin.svg"
-              alt="LinkedIn"
-              width={24}
-              height={24}
-            />
-          </a>
+          <ClickableIcon
+            altText="Github"
+            imgSrc="/github.svg"
+            link="https://www.github.com/drsaeva"
+          />
+          <ClickableIcon
+            altText="LinkedIn"
+            imgSrc="/linkedin.svg"
+            link="https://www.linkedin.com/in/david-r-saeva"
+          />
+          <ClickableIcon
+            altText="Contact Me"
+            imgSrc="/email.svg"
+            link="mailto:hi@david-saeva.com"
+          />
         </div>
       </main>
     </div>
